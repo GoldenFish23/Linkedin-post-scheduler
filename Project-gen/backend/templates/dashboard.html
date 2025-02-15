@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>LinkedIn ID: {{ user.linkedin_id }}</p>
+    <form action="{{ url_for('update_dashboard') }}" method="POST">
+        <label>Topics of Interest:</label>
+        <input type="text" name="topics" value="{{ user.topics or '' }}" placeholder="Enter topics and use comma in between">
+    
+        <br><br>
+    
+        <label>Schedule:</label><br>
+        {% for day in ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"] %}
+            <input type="checkbox" name="schedule" value="{{ day }}" 
+            {% if day in (user.schedule or "").split(",") %} checked {% endif %}> 
+            {{ day }}
+        {% endfor %}
+    
+        <br><br>
+    
+        <button type="submit">Save Preferences</button>
+    </form>
+    <a href="/">Logout</a>
+</body>
+</html>
