@@ -55,3 +55,10 @@ The app will start running on http://127.0.0.1:5000/
 9. Approve & Publish LinkedIn Posts
 10. You’ll receive an approval email with a button
 11. Click Approve to post automatically on LinkedIn
+
+## SCREENSHOTS
+
+![Screenshot 2025-02-16 224950](https://github.com/user-attachments/assets/e7d184d3-039c-4156-a24f-6d1a57ceee89)
+![Screenshot 2025-02-16 225418](https://github.com/user-attachments/assets/c207caee-b170-4a19-b413-220f0285e53e)
+![Screenshot 2025-02-16 215725](https://github.com/user-attachments/assets/4c700c93-a2cd-4fb9-9a9d-ed0540993c08)
+![Screenshot 2025-02-16 225028](https://github.com/user-attachments/assets/dc12291f-37eb-4f35-ba11-b9c3d62b09a3)
