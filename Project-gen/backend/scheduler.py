@@ -33,8 +33,8 @@ def refresh_tokens(app: Flask):
 def start_scheduler(app: Flask):
     """Start the scheduler with periodic tasks."""
     if not scheduler.running:  # Check if scheduler is already running
-        scheduler.add_job(daily_task, "interval", minutes=3, args=[app])
-        scheduler.add_job(refresh_tokens, "interval", hours=1, args=[app])
+        scheduler.add_job(daily_task, "interval", minutes=3, args=[app])  # Use "Cron" and hours=6 to schedule emails daily for 6 am.
+        scheduler.add_job(refresh_tokens, "interval", hours=1, args=[app])  # Scheduled for a refresh token every 1 hour.
         scheduler.start()
         logging.info("Scheduler started successfully.")
     else:
